@@ -15,6 +15,10 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
+
+app.get('/api', (req, res) => {
+  res.json({ message: 'Welcome to the URL shortener API' });
+});
 app.use('/api', urlRoutes);
 
 const PORT = process.env.PORT || 5000;
